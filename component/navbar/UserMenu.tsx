@@ -10,8 +10,10 @@ const items: MenuProps["items"] = [
     label: (
       <Button
         onClick={() => {
-          sessionStorage.removeItem("user");
-          document.location.reload();
+          if (typeof window !== "undefined") {
+            sessionStorage.removeItem("user");
+            document.location.reload();
+          }
         }}
         type="text"
       >

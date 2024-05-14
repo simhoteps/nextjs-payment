@@ -6,10 +6,6 @@ import Navbar from "@/component/navbar/NavbarView";
 import StoreProvider from "./StoreProvider";
 import LoginView from "@/component/login/LoginView";
 import { ToastContainer } from "react-toastify";
-
-import { selectUser } from "@/lib/features/user/userSlice";
-import { useSelector } from "react-redux";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({

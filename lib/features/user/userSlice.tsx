@@ -41,7 +41,6 @@ export const fetchUser = createAsyncThunk(
         throw new Error("Veri getirme işlemi başarısız oldu.");
       }
       const data = await response.json();
-      sessionStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error) {
       throw new Error("Veri getirme işlemi başarısız oldu.");
@@ -59,8 +58,11 @@ export const { actions, reducer } = createSlice({
       const code = action.payload.userCode;
       if (mail === "user@user.com" && code === "SKQR-65") {
         state.loginForm = {email:action.payload.email,userCode:action.payload.userCode};
-        sessionStorage.setItem("user", JSON.stringify( {email:action.payload.email,userCode:action.payload.userCode}));
-        document.location.reload();
+       
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("user", JSON.stringify( {email:action.payload.email,userCode:action.payload.userCode}));
+          document.location.reload();
+        }
       } else {
         Notify.notifyError("Veri getirme işlemi başarısız oldu.");
       }
