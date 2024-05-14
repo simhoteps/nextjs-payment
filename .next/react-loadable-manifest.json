@@ -1,0 +1,17 @@
+{
+  "app/page.tsx -> @/component/package/Card": {
+    "id": 4313,
+    "files": [
+      "static/chunks/173-ab89ec1739e5912e.js",
+      "static/chunks/974-654eae53fdb66313.js",
+      "static/chunks/313.aac5255c9e2e089d.js"
+    ]
+  },
+  "app/page.tsx -> @/component/package/TotalView": {
+    "id": 8232,
+    "files": [
+      "static/chunks/178-913925f2858a5e5f.js",
+      "static/chunks/232.0096ee7209ea5f0d.js"
+    ]
+  }
+}
