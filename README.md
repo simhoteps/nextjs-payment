@@ -23,5 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Learn More
 
 live code :""
+
 mail:user@user.com
+
 code:SKQR-65
