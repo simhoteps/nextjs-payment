@@ -1,0 +1,30 @@
+@import "@/layouts/mainStyles/mainColors.scss";
+@import "@/layouts/mainStyles/mainText.scss";
+
+
+.detailImg{
+  width: 100%;
+  border-radius: 16px;
+}
+.rowContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.rowSpaceContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.border {
+  border: 1px solid $gray3;
+  padding: 24px;
+  border-radius: 8px;
+  color: $black;
+}
+

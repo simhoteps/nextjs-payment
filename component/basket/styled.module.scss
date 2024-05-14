@@ -1,0 +1,85 @@
+@import "@/layouts/mainStyles/mainColors.scss";
+@import "@/layouts/mainStyles/mainText.scss";
+
+.basketContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height:100%;
+  min-width: 320px;
+
+}
+.title {
+  font-size: $subtitle_fontSize;
+  font-weight: $subtitle3_fontWeight;
+}
+.rowContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.rowSpaceContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  justify-content: space-between;
+}
+.basketItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 420px;
+  overflow: auto;
+  cursor: pointer;
+}
+.basketItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  gap: 4px;
+  border-radius: 8px;
+  width: 320px;
+  background-color: $gray2;
+  flex-wrap: nowrap;
+  color: black;
+}
+.iconButton{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border:none;
+  box-shadow: none;
+  width: 24px;
+  &:hover{
+    background-color: transparent;
+  }
+}
+
+.detailImg{
+  width: 100%;
+  border-radius: 16px;
+}
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  
+  .basketItem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 701px) {
+
+  .basketItem {
+    width: 100%;
+  }
+}

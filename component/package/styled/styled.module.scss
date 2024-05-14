@@ -1,0 +1,138 @@
+@import "@/layouts/mainStyles/mainColors.scss";
+@import "@/layouts/mainStyles/mainText.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 32px;
+  border-radius: 32px;
+  background-color: $white;
+  height: 75vh;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-gap: 20px;padding: 12px;
+  overflow: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+/*   background-color: $gray2; */
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.amountContiner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  width: 100%;
+  color: black;
+}
+.detailText {
+  font-size:$subtitle4_fontSize;
+  font-weight: $subtitle4_fontWeight;
+}
+
+.title {
+  font-size: $body2_fontSize;
+  font-weight: $body2_fontWeight;
+}
+.infoTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.text {
+  margin-left: 8px;
+}
+.tagContainer {
+  padding: 4px 16px;
+  border-radius: 16px;
+  color: $white;
+  background-color: #f54f2960;
+}
+
+.tagContainer:hover {
+  background-color: $orange;
+}
+.link {
+  font-size: $subtitle3_fontSize;
+  font-weight: $subtitle3_fontSize;
+  text-decoration: none;
+  color: #f54f2990;
+  &:hover {
+    /*   background-color: $secondary; */
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.03);
+    color: $orange;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-gap: 20px;
+    overflow: auto;
+  }
+
+  .img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px 0px 0px 8px;
+  }
+}
+
+@media (max-width: 701px) {
+  .main {
+    padding: 16px;
+    height: 85vh;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-gap: 20px;
+    overflow: auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .detailText {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
