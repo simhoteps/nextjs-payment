@@ -6,6 +6,7 @@ import Navbar from "@/component/navbar/NavbarView";
 import StoreProvider from "./StoreProvider";
 import LoginView from "@/component/login/LoginView";
 import { ToastContainer } from "react-toastify";
+import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -13,13 +14,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    const storedUser = sessionStorage.getItem("user") || "";
+    setUser(storedUser);
+  }, []);
   return (
     <html lang="en">
       <body className={inter.className}>
         <StoreProvider>
         
-        {sessionStorage.getItem("user") ? (
+        {user !==""? (
             <div>
               <Navbar />
               <main className={styled.content}>{children}</main>
