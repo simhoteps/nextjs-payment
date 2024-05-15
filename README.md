@@ -22,8 +22,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-live code :""
+Live code :  [`Payment System`]( https://nextjs-payment-eight.vercel.app/)
 
-mail:user@user.com
+Mail: user@user.com
 
-code:SKQR-65
+Code: SKQR-65
